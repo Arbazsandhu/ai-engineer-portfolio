@@ -13,13 +13,26 @@ client = OpenAI(
 )
 
 #Send request to OpenAI API
-response = client.chat.completions.create(
-    model="gpt-4.1-mini",
-    messages=[
-        {"role": "user",
-         "content": "Explain what an AI Engineer does in 2 sentences."}
-    ]
-)
 
-#Print response
-print(response.choices[0].message.content)
+print("AI Engineer Bot - type 'quit' to exit\n ")
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == "quit":
+        print("Goodbye!")
+        break
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {
+                "role": "system", "content": "You are a helpful assistant who explains AI engineering concepts clearly and concisely."
+            },
+            {
+                "role": "user", "content": user_input
+            }
+        ]
+    )
+
+    #Print response
+    print(f"Bot: {response.choices[0].message.content}\n")
