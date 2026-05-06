@@ -1,34 +1,19 @@
-# AI Engineering Portfolio
+# AI Engineer Portfolio — Arbaz Sandhu
 
-This repository contains my AI engineering, automation, analytics, and machine learning projects.
+## Project 1: OpenAI Chatbot
+A conversational AI chatbot built with the OpenAI API (GPT-4o-mini).
 
-## Topics
+### What it does
+- Takes user input in a loop
+- Sends messages to OpenAI with a system prompt
+- Returns responses from GPT-4o-mini
 
-- Python
-- AI Engineering
-- Machine Learning
-- APIs
-- Automation
-- Analytics
-- Snowflake
-- Data Engineering
+### Tech Stack
+- Python 3.13
+- OpenAI API
+- python-dotenv
 
-## Setup
-
-1. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Create a `.env` file
-
-```env
-OPENAI_API_KEY=your_api_key_here
-```
-
-3. Run the project
-
-```bash
-python openai_test.py
-```
+### How to run
+1. Clone this repo
+2. Add your OpenAI API key to a `.env` file: `OPENAI_API_KEY=your_key_here`
+3. Run: `python openai_test.py`
